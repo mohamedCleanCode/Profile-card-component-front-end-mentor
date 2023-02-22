@@ -16,7 +16,7 @@ svg:first-child {
   left: -500px;
   top: -500px;
 }
-svg:last-child {
+svg:nth-child(2) {
   position: absolute;
   right: -600px;
   bottom: -650px;
@@ -24,10 +24,74 @@ svg:last-child {
 .container {
   position: relative;
   z-index: 1000;
-  width: 90%;
+  width: 400px;
   height: 500px;
   background-color: #fff;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 12px;
+  box-shadow: 10px 10px 10px #00000047;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 350px;
+  }
+}
+.container .top {
+  height: 35%;
+  background-image: url("./images/bg-pattern-card.svg");
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.container .image {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translatex(-50%);
+  border: 5px solid white;
+  border-radius: 50%;
+}
+.image img {
+  border-radius: 50%;
+}
+.container .person {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 55%;
+  text-align: center;
+}
+.person h1 span {
+  font-weight: normal;
+  color: silver;
+  display: inline-block;
+  margin-left: 15px;
+}
+.person p {
+  color: silver;
+  margin-top: 15px;
+  font-size: 25px;
+}
+.container .info {
+  position: absolute;
+  width: 100%;
+  bottom: 5%;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+}
+.info .col {
+  text-align: center;
+}
+.col p:first-child {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.col p:last-child {
+  color: silver;
+  letter-spacing: 2px;
 }
